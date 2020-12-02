@@ -1,6 +1,5 @@
 with open("./input.txt", "r") as f:
-    report = f.readlines()
-    report = [int(x.strip('\n')) for x in report]
+    report = [int(x.strip('\n')) for x in f.readlines()]
 
 
 def part1(r):

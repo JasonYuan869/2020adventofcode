@@ -1,8 +1,7 @@
 import re
 
 with open("./input.txt", "r") as f:
-    passwords = f.readlines()
-    passwords = [x.strip('\n') for x in passwords]
+    passwords = [x.strip('\n') for x in f.readlines()]
 
     """
     Group 1: min occurrences
