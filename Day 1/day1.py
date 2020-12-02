@@ -4,20 +4,20 @@ with open("./input.txt", "r") as f:
 
 
 def part1(r):
-    for a in r:
-        b = 2020 - a
-        if b in r:
-            return a * b
+    for first_expense in r:
+        second_expense = 2020 - first_expense
+        if second_expense in r:
+            return first_expense * second_expense
 
 
 def part2(r):
-    for a in r:
-        b = 2020 - a
-        for c in r:
-            if c == a: continue
-            d = b - c
-            if d in r:
-                return a * c * d
+    for first_expense in r:
+        second_expense = 2020 - first_expense
+        for third_expense in r:
+            if third_expense == first_expense: continue
+            difference = second_expense - third_expense
+            if difference in r:
+                return first_expense * difference * third_expense
 
 
 print(part1(report))
